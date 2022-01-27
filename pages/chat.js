@@ -20,7 +20,7 @@ export default function ChatPage() {
     function handleNovaMensagem(novaMensagem) {
         const mensagem = {
             id: listaDeMensagens.length + 1,
-            de: 'vanessametonini',
+            de: 'eliseunetto',
             texto: novaMensagem,
         };
 
@@ -108,6 +108,14 @@ export default function ChatPage() {
                                 color: appConfig.theme.colors.neutrals[200],
                             }}
                         />
+                        <Button
+                            variant='tertiary'
+                            colorVariant='neutral'
+                            label='Enviar'
+                            onClick={() => {
+                                handleNovaMensagem(mensagem);
+                            }}
+                        />
                     </Box>
                 </Box>
             </Box>
@@ -174,7 +182,7 @@ function MessageList(props) {
                                     display: 'inline-block',
                                     marginRight: '8px',
                                 }}
-                                src={`https://github.com/vanessametonini.png`}
+                                src={`https://github.com/eliseunetto.png`}
                             />
                             <Text tag="strong">
                                 {mensagem.de}
